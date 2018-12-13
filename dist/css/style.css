@@ -1,2 +1,55 @@
 body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; }
+
+.sheet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; }
+
+.toolbox {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem; }
+  .toolbox__undo-redo {
+    width: 100%; }
+  .toolbox__color-picker {
+    width: 100%;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .toolbox__color-picker--color {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 5px 5px 0;
+      border-radius: 50%;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.5); }
+  .toolbox__weight-picker {
+    width: 100%; }
+    .toolbox__weight-picker--line {
+      width: 200px; }
+    .toolbox__weight-picker button:not(:first-child) {
+      margin-top: 1rem; }
+    .toolbox__weight-picker button > span, .toolbox__weight-picker button div {
+      pointer-events: none; }
+
+body {
+  display: flex; }
+
+.section-canvas {
+  position: relative;
+  width: 75vw;
+  padding: 1.875rem; }
+
+.section-tools {
+  width: 25vw; }
+
+body {
   background-color: #333333; }

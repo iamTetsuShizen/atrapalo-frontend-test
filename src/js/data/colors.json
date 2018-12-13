@@ -1,0 +1,15 @@
+{
+    "colors" : [
+        {"name" : "red", "hex" : "#FF0000", "rgba" : "rgba(255, 0, 0, 1)"},
+        {"name" : "blue", "hex" : "#0000FF", "rgba" : "rgba(0, 0, 255, 1)"},
+        {"name" : "green", "hex" : "#00FF00", "rgba" : "rgba(0, 255, 0, 1)"},
+        {"name" : "yellow", "hex" : "#FFFF00", "rgba" : "rgba(255, 255, 0, 1)"},
+        {"name" : "magenta", "hex" : "#FF00FF", "rgba" : "rgba(255, 0, 255, 1)"},
+        {"name" : "cyan", "hex" : "#00FFFF", "rgba" : "rgba(0, 255, 255, 1)"},
+        {"name" : "orange", "hex" : "#FFA500", "rgba" : "rgba(255,165,0, 1)"},
+        {"name" : "purple", "hex" : "#800080", "rgba" : "rgba(128, 0, 128, 1)"},
+        {"name" : "grey", "hex" : "#808080", "rgba" : "rgba(128, 128, 128, 1)"},
+        {"name" : "white", "hex" : "#FFFFFF", "rgba" : "rgba(255, 255, 255, 1)" },
+        {"name" : "black", "hex" : "#000000", "rgba" : "rgba(0, 0, 0, 1)"}
+    ]
+}
