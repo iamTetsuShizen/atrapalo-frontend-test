@@ -1,5 +1,7 @@
 .toolbox {
     height: 100%;
+    width: 100%;
+   
     box-sizing: border-box;
 
     display: flex;
@@ -7,14 +9,32 @@
     align-items: center;
 
     padding: 1.25rem;
-
+    padding-left: 0;
+    //UNDO-REDO SECTION
     &__undo-redo {
         width: 100%;
-    }
 
+        display: flex;
+        justify-content: space-around;
+        & button {
+
+            border: none;
+            background-color: $color-grey-dark;
+            cursor: pointer;
+            padding: 10px 10px;
+            display: inline-block;
+
+            & i {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $color-white;
+            }
+        }
+    }
+    //COLOR PICKER SECTION
     &__color-picker {
         width: 100%;
-        padding: 1.25rem;
+        margin: 2rem 0;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -27,16 +47,68 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.5);
         }
     }
+    //WEIGHT PICKER SECTION
     &__weight-picker {
         width: 100%;
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+
         &--line{
-            width: 200px;
+            width: 100px;
         }
 
-        & button:not(:first-child) {
-            margin-top: 1rem;
+        & button {
+            border: none;
+            background-color: $color-grey-dark;
+            cursor: pointer;
+            padding: 10px 20px;
+            display: inline-block;
+
+            transition: all 0.3s;
+
+            @media (max-width: 600px) {
+                padding: 5px 10px;
+            }
+
+            &>span {
+                color: $color-white;
+                font-size: 1rem;
+                font-weight: 700;
+
+                @media (max-width: 600px) {
+                    font-size: 1.2rem;
+                }
+            }
+            
+            & div {
+                margin-top: 5px;
+                border-bottom-color: $color-white !important; // need !important to alter preference in front for in-line style of border
+                border-radius: 50px;
+                transition: all 0.3s;
+
+                @media (max-width: 600px) {
+                    display: none
+                }
+            }
+
+            &:hover {
+                background-color: $color-white;
+            }
+
+            &:hover span {
+                color: $color-black;
+            }
+
+            &:hover div {
+                border-color: $color-black!important;
+            }
         }
+
+
+¡
 
         & button>span, & button div {
             pointer-events: none;

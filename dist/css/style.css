@@ -1,7 +1,16 @@
-body {
+@charset "UTF-8";
+html, body {
   margin: 0;
   padding: 0;
-  height: 100vh; }
+  height: 100vh;
+  width: 100vw; }
+
+body {
+  position: relative;
+  overflow: hidden; }
+
+* {
+  box-sizing: border-box; }
 
 .sheet {
   position: absolute;
@@ -12,16 +21,30 @@ body {
 
 .toolbox {
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  padding-left: 0; }
   .toolbox__undo-redo {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    justify-content: space-around; }
+    .toolbox__undo-redo button {
+      border: none;
+      background-color: #333333;
+      cursor: pointer;
+      padding: 10px 10px;
+      display: inline-block; }
+      .toolbox__undo-redo button i {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff; }
   .toolbox__color-picker {
     width: 100%;
-    padding: 1.25rem;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
@@ -32,12 +55,46 @@ body {
       border-radius: 50%;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.5); }
   .toolbox__weight-picker {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap; }
     .toolbox__weight-picker--line {
-      width: 200px; }
-    .toolbox__weight-picker button:not(:first-child) {
-      margin-top: 1rem; }
-    .toolbox__weight-picker button > span, .toolbox__weight-picker button div {
+      width: 100px; }
+    .toolbox__weight-picker button {
+      border: none;
+      background-color: #333333;
+      cursor: pointer;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: all 0.3s; }
+      @media (max-width: 600px) {
+        .toolbox__weight-picker button {
+          padding: 5px 10px; } }
+      .toolbox__weight-picker button > span {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700; }
+        @media (max-width: 600px) {
+          .toolbox__weight-picker button > span {
+            font-size: 1.2rem; } }
+      .toolbox__weight-picker button div {
+        margin-top: 5px;
+        border-bottom-color: #fff !important;
+        border-radius: 50px;
+        transition: all 0.3s; }
+        @media (max-width: 600px) {
+          .toolbox__weight-picker button div {
+            display: none; } }
+      .toolbox__weight-picker button:hover {
+        background-color: #fff; }
+      .toolbox__weight-picker button:hover span {
+        color: #000; }
+      .toolbox__weight-picker button:hover div {
+        border-color: #000 !important; }
+    ¡
+.toolbox__weight-picker button > span, .toolbox__weight-picker button div {
       pointer-events: none; }
 
 body {
@@ -45,11 +102,20 @@ body {
 
 .section-canvas {
   position: relative;
-  width: 75vw;
+  width: 100vw;
   padding: 1.875rem; }
 
 .section-tools {
-  width: 25vw; }
+  width: 200px;
+  height: 100%;
+  box-sizing: initial;
+  position: absolute;
+  right: -200px;
+  border-left: 2rem solid #FFA500;
+  background-color: #333333;
+  transition: all 0.5s; }
+  .section-tools:hover {
+    right: 0; }
 
 body {
   background-color: #333333; }

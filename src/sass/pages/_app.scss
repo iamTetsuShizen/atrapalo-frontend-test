@@ -5,10 +5,26 @@ body {
 
 .section-canvas {
     position: relative;
-    width: 75vw;
+    width: 100vw;
     padding: 1.875rem;
 }
 
 .section-tools {
-    width: 25vw;
+    width: 200px;
+    height: 100%;
+
+    box-sizing: initial;
+
+    position: absolute;
+    right: -200px;
+
+
+    border-left: 2rem solid $color-orange;
+    background-color: $color-grey-dark;
+
+    transition: all 0.5s;
+
+    &:hover{
+        right: 0;
+    }
 }
