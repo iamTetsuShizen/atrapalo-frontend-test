@@ -41,7 +41,8 @@ body {
       .toolbox__undo-redo button i {
         font-size: 2rem;
         font-weight: bold;
-        color: #fff; }
+        color: #fff;
+        pointer-events: none; }
   .toolbox__color-picker {
     width: 100%;
     margin: 2rem 0;
