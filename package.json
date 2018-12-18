@@ -7,6 +7,8 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
+    "test": "mocha -r esm test/**/*.js",
+    "compile:test": "webpack test/**/*.js dist/js/test-bundle.js --mode development",
     "compile:sass": "node-sass src/sass/main.scss dist/css/style.css -w"
   },
   "repository": {
@@ -23,12 +25,17 @@
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "esm": "^3.0.84",
+    "mocha": "^5.2.0",
     "node-sass": "^4.10.0",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "jsdom": "^13.1.0"
   }
 }
